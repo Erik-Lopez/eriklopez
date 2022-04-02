@@ -1,0 +1,25 @@
+.main__img { 
+	height: 200px;
+	filter: brightness( 100% ) contrast( 100% ) saturate( 0% ) blur( 0px ) hue-rotate( 0deg );
+}
+.main__img img {
+	height: 100%;
+	width: auto;
+}
+
+.main__header {
+	font-size: 4em;
+}
+
+.main__video {
+	margin-left: 25%;
+}
+
+.main__img {
+	height: 720px;
+	width: auto;
+	margin-left: 25%;
+}
+.link {
+	color: black;
+}

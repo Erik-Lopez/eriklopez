@@ -1,0 +1,67 @@
+* {
+	font-family: "Oswald", Sans-serif; 
+}
+
+body {
+	margin: 0;
+}
+
+.whitespace {
+	height: 50px;
+}
+.blackspace {
+	background-color: black;
+	height: 20vh;
+}
+.home-icon {
+	font-size: 200px;
+	position: absolute;
+	margin-top: -50px;
+	margin-left: 20px;
+	text-decoration: none;
+	color: black;
+}
+.home-icon img { width: 100px; }
+
+.main {
+	margin-right: auto;
+	margin-left: auto;
+	position: relative;
+
+	/*width: 1200px*/;
+	/*width: 62.5vw;*/
+	width: 80vw;
+	margin: auto;
+}
+
+.main-header {
+	font-size: 4em;
+	/*margin-left: -50px;*/
+}
+
+.main__header {
+	font-size: 3em;
+}
+
+.main__paragraph {
+	font-size: 1.5em;
+}
+
+.link-button {
+	background-color: black;
+	color: white;
+	padding: 20px;
+	text-decoration: none;
+	text-align: center;
+	border-width: 0;
+	cursor: pointer;
+}
+.link-button:hover {
+	background-color: lightgrey;
+	color: black;
+	transition: 0.5s;
+}
+
+/*.link-button:active {
+	background-color: white;
+}*/

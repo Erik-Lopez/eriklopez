@@ -1,0 +1,31 @@
+.main {
+	display: flex;
+	flex-direction: row;
+
+	margin-right: auto;
+	margin-left: auto;
+	position: relative;
+
+	width: 1200px;
+	margin: auto;
+}
+.main__img { height: 720px; margin-right: 20px; }
+
+.main__img > img {
+	height: 100%;
+	width: auto;
+	filter: brightness( 100% ) contrast( 100% ) saturate( 0% ) blur( 0px ) hue-rotate( 0deg );
+}
+
+.main__stuff {
+	display: flex;
+	flex-direction: column;
+}
+
+.main__header {
+	font-size: 4em;
+}
+.main__stuff > p {
+	font-size: 1.5em;
+	text-indent: 10px;
+}
