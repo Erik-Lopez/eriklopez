@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+{% block head %}
+	<link rel="stylesheet" href="{{ url_for('static', path='styles/videos.css') }}">
+{% endblock %}
+
+{% block main %}
+<main class="main">
+	<h1 class="main-header">MIS VIDEOS</h1>	
+	<p class="main__paragraph">Tengo un <a class="link" href="https://www.youtube.com/channel/UCJpqhKfUNFYbCU00XbDahDg">canal en YouTube</a> donde subo algunas clases de manera totalmente gratuita.</p>
+	<p class="main__paragraph">Videos como el siguiente demuestran el rigor y el tono que me gusta dar a las clases:</p>
+
+
+	<iframe class="main__video" width="560" height="315" src="https://www.youtube-nocookie.com/embed/VorZUfuiD0o" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+	<div class="main__img">
+		<img src="{{ url_for('static', path='images/exaltado_0023.png') }}">
+	</div>
+</main>
+{% endblock %}

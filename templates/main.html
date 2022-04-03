@@ -1,16 +1,20 @@
 {% extends "base.html" %}
 
+{% block head %}
+	<link rel="stylesheet" href="{{ url_for('static', path='styles/main.css') }}">
+{% endblock %}
+
 {% block main %}
 <main class="main">
 	<div class="main__img">
-		<img src="images/tu_0031_texto.png">
+		<img src="{{ url_for('static', path='images/tu_0031_texto.png') }}">
 	</div>
 	<div class="main__stuff">
 		<h1 class="main__header">¿NECESITAS ALGO?</h1>
 		<nav class="main__navbar">
 			<li class="navbar__item"><a href="clases/" class="link-button">CLASES</a></li>
 			<li class="navbar__item"><a href="about/" class="link-button">SOBRE MÍ</a></li>
-			<li class="navbar__item"><a href="youtube/" class="link-button">MIS VIDEOS</a></li>
+			<li class="navbar__item"><a href="videos/" class="link-button">MIS VIDEOS</a></li>
 		</nav>
 	</div>
 </main>

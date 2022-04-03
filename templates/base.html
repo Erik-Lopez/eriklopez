@@ -1,12 +1,13 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<link rel="stylesheet" href="../styles/common.css">
-	<link rel="stylesheet" href="../styles/index.css">
+	<link rel="stylesheet" href="{{ url_for('static', path='styles/common.css') }}">
+	{% block head %}
+	{% endblock %}
 </head>
 
 <body>
-	<a class="home-icon" href="#"><img src="../images/home.webp"></a>
+	<a class="home-icon" href="/"><img src="{{ url_for('static', path='images/home.webp') }}"></a>
 	<div class="whitespace"></div>
 
 	{% block main %}
