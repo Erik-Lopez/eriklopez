@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block head %}
+<link rel="stylesheet" href="{{ url_for('static', path='styles/videos.css') }}"
+{% endblock %}
+
+{% block main %}
+<main class="main">
+        <h1 class="main-header">EXITO!!!!!!</h1>
+	<p class="main__paragraph">La solicitud ha sido enviada. ¡Me pondré en contacto contigo!</p>
+        <div class="main__img">
+                <img src="{{ url_for('static', path='images/exaltado_0023.png') }}">
+        </div>
+</main>
+
+{% endblock %}

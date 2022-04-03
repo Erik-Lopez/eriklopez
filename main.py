@@ -53,4 +53,6 @@ async def solicitar(request: Request, tipo: str, name: str = Form(...), contact:
         file.write("Tipo de clase: %s\n" % tipo)
         file.write("Contacto: %s\n" % contact)
         file.write("Mensaje adicional: %s\n" % message) 
+
+    return templates.TemplateResponse("exito.html", {"request": request})
     
