@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+
+{% block head %}
+	<link rel="stylesheet" href="{{ url_for('static', path='styles/solicitar.css') }}">
+{% endblock %}
+
+{% block main %}
+<main class="main">
+	{% if type == 'online' %}
+		<h1 class="main-header">Clases Online</h1>
+
+		<h1 class="main__header">Detalles</h1>
+		<p class="main__paragraph">Organizaremos una rápida clase a través de una videollamada.</p>
+		<p class="main__paragraph">Discord es la plataforma preferida, pero me puedo adaptar a tus necesidades.</p>
+		<p class="main__paragraph">Precio: 3€ cada hora.</p>
+		<h1 class="main__header">Enviar solicitud</h1>
+		<p class="main__paragraph">Si no te interesa negociar y no tienes mucha prisa, rellena ésto y me pondré en contacto contigo.</p>
+	{% elif type == 'presencial' %}	
+		<h1 class="main-header">Clases Presenciales</h1>
+		<h1 class="main__header">Detalles</h1>
+		<p class="main__paragraph">La organizaremos donde prefieras (dentro de Madrid, cuanto más cerca de Parla, más barato) y ahí comentaremos el tema en cuestión.</p>
+		<p class="main__paragraph">Precio: 5€ cada hora.</p>
+	{% elif type == 'video' %}
+		<h1 class="main-header">Video</h1>
+		<h1 class="main__header">Detalles</h1>
+		<p class="main__paragraph">¿Prefieres algo que puedas rebobinar y repetir? El video es tu mejor opción.</p>
+		<p class="main__paragraph">Hacer un video lleva bastante tiempo, así que si es urgente, prioriza problemas concretos o elige otra opción.</p>
+		<p class="main__paragraph">Precio: 12€ por hora (20 céntimos por minuto).</p>
+	{% endif %}
+
+	<form method="POST" enctype="multipart/form-data" action="/clases/solicitar/{{type}}" class="form">	
+		<label for="name" class="form__field">
+			Nombre: <input type="text" placeholder="Tu Nombre" name="name" required="true">
+		</label>
+
+		<label for="contact" class="form__field">
+			Contacto*: <input type="text" placeholder="Forma de contacto" name="contact" required="true">
+		</label>	
+
+		<label for="message" class="form__field">
+			Información adicional: <textarea cols="20" rows="5" type="text" placeholder="Aquí puedes darme detalles sobre lo que quieres." name="message" required="true"></textarea>
+		</label>	
+
+		<p>* Cualquier forma de contacto, como número de teléfono móvil, dirección email, WhatsApp, Discord... es válida.</p>
+		<input class="link-button" type="submit" value="ENVIAR SOLICITUD">
+	</form> 
+</main>
+{% endblock %}

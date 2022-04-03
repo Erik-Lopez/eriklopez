@@ -1,0 +1,66 @@
+{% extends "base.html" %}
+
+{% block head %}
+	<link rel="stylesheet" href="{{ url_for('static', path='styles/clases.css') }}">
+{% endblock %}
+
+{% block main %}
+<main class="main">
+	<h1 class="main-header">CLASES</h1>
+
+	<h1 class="main__header">Asignaturas</h1>
+	<p class="main__paragraph">Las que mejor explico son los siguientes:</p>
+	<ul class="main__paragraph">
+		<li>Matemáticas</li>
+		<li>Física</li>
+		<li>Programación</li>
+	</ul>
+	<p class="main__paragraph">Aunque soy capaz de poner en práctica otras, es seguro que hay mejores profesores para ellas.</p>
+
+	<h1 class="main__header">Precios</h1>
+	<p class="main__paragraph">Todos los precios son <u>NEGOCIABLES</u>.</p>
+	<p class="main__paragraph">Al fondo de la página hay precios de referencia, pero todo se puede hablar.</p>
+	<p class="main__paragraph">Evidentemente, cuanto mayor el precio, mayor la prioridad frente a otros clientes.</p>
+
+	<h1 class="main__header"></h1>
+	<h1 class="main__header">Opciones</h1>
+	<div class="class-options">
+		<div class="class-options__option-box">
+			<h1 class="class-options__header">ONLINE</h1>
+			<p>Te explicaré todo lo que necesites a través de una videollamada.</p>
+			<p><b>¡OJO!:</b> Aunque esta sea la forma más barata, se recomienda privacidad y un buen micrófono para una mejor experiencia.</p>
+			<ul>
+				<li>Precio: 3€ / hora</li>
+				<li>Disponibilidad: Alta</li>
+			</ul>
+
+			<a href="/clases/solicitar/online" class="class-request link-button">SOLICITAR</a>
+		</div>
+
+		<div class="class-options__option-box">
+			<h1 class="class-options__header">PRESENCIAL</h1>
+			<p>Yo voy a tu casa (o tú a la mía) y ahí realizamos la clase.</p>
+			<ul class="class-options__list">
+				<li>Precio: 5€ / hora</li>
+				<li>Disponibilidad: Media</li>
+			</ul>
+
+			<a href="/clases/solicitar/presencial" class="class-request link-button">SOLICITAR</a>
+		</div>
+
+		<div class="class-options__option-box">
+			<h1 class="class-options__header">VIDEO</h1>
+			<p>Me das un tema y te grabo uno (o varios) videos.</p>
+			<p>Si es una cuestión pequeña, puede ser un video rápido y barato.</p>
+			<p>Un video largo puede costar caro y tardar en llegar.</p>
+			<ul class="class-options__list">
+				<li>Precio: 20¢ / minuto</li>
+				<li>Disponibilidad: Variable</li>
+			</ul>
+
+			<a href="/clases/solicitar/video" class="class-request link-button">SOLICITAR</a>
+		</div>
+
+	</div>
+</main>
+{% endblock %}
